@@ -26,10 +26,11 @@
     </android.support.design.widget.TextInputLayout>
 
 
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="250sp"
-            android:id="@+id/lista_contador"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="250sp"
+        android:id="@+id/lista_contador"
+        android:focusable="true"/>
 
 
     <TextView
