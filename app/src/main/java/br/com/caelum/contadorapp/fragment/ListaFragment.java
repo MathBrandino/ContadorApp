@@ -86,6 +86,8 @@ public class ListaFragment extends Fragment {
                     valores.add(Integer.valueOf(String.valueOf(valor)));
 
                     entradaValor.getText().clear();
+                    layout.setErrorEnabled(false);
+
 
                     onResume();
                 } else {
@@ -93,6 +95,7 @@ public class ListaFragment extends Fragment {
                 }
             }
         });
+
 
         FloatingActionButton floatingActionButton = (FloatingActionButton) view.findViewById(R.id.fab2);
 

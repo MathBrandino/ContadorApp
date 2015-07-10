@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
         tx.replace(R.id.frame_esquerda, listaFragmentEsquerda);
         tx.commit();
+
+
+
     }
 
     @Override
@@ -84,4 +87,7 @@ public class MainActivity extends AppCompatActivity {
         nome = (String) savedInstanceState.getSerializable("nome");
         nome1 = (String) savedInstanceState.getSerializable("nome1");
     }
+
+
+
 }
