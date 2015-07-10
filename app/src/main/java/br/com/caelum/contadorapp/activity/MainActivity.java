@@ -1,10 +1,13 @@
 package br.com.caelum.contadorapp.activity;
 
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import br.com.caelum.contadorapp.R;
 import br.com.caelum.contadorapp.fragment.ListaFragment;
@@ -49,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
 
         return true;
     }
@@ -63,8 +67,8 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_zerar) {
-
+        if (id == R.id.action_sair) {
+            finish();
 
             return true;
         }
@@ -88,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
         nome1 = (String) savedInstanceState.getSerializable("nome1");
     }
 
-
-
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 }

@@ -135,7 +135,12 @@ public class ListaFragment extends Fragment {
 
         resultadoSoma.setText(String.valueOf(soma));
 
-        ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(getActivity(), android.R.layout.simple_list_item_1, valores);
+        carregaLista(valores);
+
+    }
+
+    public void carregaLista(List<Integer> valores){
+        ArrayAdapter<Integer> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, valores);
 
         listView.setAdapter(adapter);
 
@@ -156,7 +161,7 @@ public class ListaFragment extends Fragment {
 
         if(savedInstanceState != null) {
             valores = (List<Integer>) savedInstanceState.getSerializable("valores");
-
         }
     }
+
 }
