@@ -60,7 +60,10 @@ public class ListaFragment extends Fragment {
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-                new AlertDialog.Builder(getActivity()).setTitle("Remover : " + valores.get(position).toString() + "?")
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Atencao")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setMessage("Remover : " + valores.get(position).toString() + "?")
                         .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
