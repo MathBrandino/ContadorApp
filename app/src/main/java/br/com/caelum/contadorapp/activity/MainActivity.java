@@ -42,9 +42,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
-        tx.replace(R.id.frame_esquerda, listaFragmentEsquerda);
+        /*tx.replace(R.id.frame_esquerda, listaFragmentEsquerda);
         tx.commit();
-
+*/
     }
 
     @Override
