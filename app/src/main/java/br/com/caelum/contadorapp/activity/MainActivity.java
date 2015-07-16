@@ -45,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
         tx.replace(R.id.frame_esquerda, listaFragmentEsquerda);
         tx.commit();
 
-
-
     }
 
     @Override

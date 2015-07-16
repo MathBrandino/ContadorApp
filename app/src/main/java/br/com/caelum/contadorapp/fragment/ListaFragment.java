@@ -113,9 +113,6 @@ public class ListaFragment extends Fragment {
 
         resultadoSoma = (TextView) view.findViewById(R.id.soma);
 
-
-
-
         return view;
     }
 
@@ -149,14 +146,12 @@ public class ListaFragment extends Fragment {
 
     }
 
-
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
         outState.putSerializable("valores", (Serializable) valores);
     }
-
 
     @Override
     public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
@@ -166,5 +161,4 @@ public class ListaFragment extends Fragment {
             valores = (List<Integer>) savedInstanceState.getSerializable("valores");
         }
     }
-
 }
