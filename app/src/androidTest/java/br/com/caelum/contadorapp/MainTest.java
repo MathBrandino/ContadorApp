@@ -100,6 +100,16 @@ public class MainTest extends ActivityInstrumentationTestCase2 {
                 ViewActions.click()
         );
 
+        Espresso.onView(
+                ViewMatchers.withId(R.id.soma)
+        ).check(
+                ViewAssertions.matches(
+                        Matchers.not(
+                            ViewMatchers.withText("456")
+                        )
+                )
+        );
+
     }
 
     public void testando(){
@@ -125,7 +135,11 @@ public class MainTest extends ActivityInstrumentationTestCase2 {
 
 
         Espresso.onData(
-                Matchers.empty()
+                Matchers.allOf(
+                        Matchers.is(
+                                Matchers.instanceOf(Integer.class)
+                        )
+                )
         );
 
         Espresso.onView(
