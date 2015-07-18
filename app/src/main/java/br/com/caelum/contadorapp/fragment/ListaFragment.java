@@ -44,7 +44,7 @@ public class ListaFragment extends Fragment {
         Bundle bundle = getArguments();
         nome = (String) bundle.getSerializable("nome");
 
-        View view = inflater.inflate(R.layout.item_contador, container, false);
+        View view = inflater.inflate(R.layout.activity_contador, container, false);
 
         valores = new ArrayList<>();
         TextView nomeTextView = (TextView) view.findViewById(R.id.nome_text);
@@ -77,7 +77,7 @@ public class ListaFragment extends Fragment {
             }
         });
 
-        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.botao_adicionar);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
