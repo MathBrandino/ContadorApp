@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contador);
-
         final EditText entradaValor = (EditText) findViewById(R.id.entra_valor_contagem);
 
         FloatingActionButton botaoAdiciona = (FloatingActionButton) findViewById(R.id.botao_adicionar);
@@ -64,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
                 valores.remove(position);
                 adapter.notifyDataSetChanged();
 
+                onResume();
+
                 return false;
             }
         });
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         somatoria = (TextView) findViewById(R.id.soma);
+
 
     }
 
@@ -80,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
 
         int soma = 0;
+
         if (valores.size() > 0) {
             for (int valor : valores) {
 
@@ -91,8 +94,9 @@ public class MainActivity extends AppCompatActivity {
 
 
             }
-            somatoria.setText(String.valueOf(soma));
         }
+
+        somatoria.setText(String.valueOf(soma));
 
     }
 }

@@ -26,7 +26,8 @@ public class MainTest extends ActivityInstrumentationTestCase2 {
                 ViewMatchers.withId(R.id.entra_valor_contagem)
         ).check(
                 ViewAssertions.matches(
-                        ViewMatchers.isDisplayed()
+                        ViewMatchers.isDisplayed() //sem erro
+                        //ViewMatchers.withText("Erro")
                 )
         );
     }
@@ -93,7 +94,6 @@ public class MainTest extends ActivityInstrumentationTestCase2 {
 
     }
 
-
     public void testaValorInserido(){
 
         getActivity();
@@ -130,9 +130,6 @@ public class MainTest extends ActivityInstrumentationTestCase2 {
                         ViewMatchers.withText("246")
                 )
         );
-
-
-
     }
 
 }
