@@ -164,6 +164,7 @@ public class ListaFragment extends Fragment {
 
         if(savedInstanceState != null) {
             valores = (List<Integer>) savedInstanceState.getSerializable("valores");
+            carregaLista(valores);
         }
     }
 
