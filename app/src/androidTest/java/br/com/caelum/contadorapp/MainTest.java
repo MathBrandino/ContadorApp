@@ -11,22 +11,7 @@ import org.hamcrest.Matchers;
 import br.com.caelum.contadorapp.activity.MainActivity;
 
 /**
- * Created by matheus on 17/07/15.
- */
-public class MainTest extends ActivityInstrumentationTestCase2 {
-
-    public MainTest() {
-        super(MainActivity.class);
-    }
-
-    public void testaEditText() {
-        getActivity();
-
-        Espresso.onView(
-                ViewMatchers.withId(R.id.entra_valor_contagem)
-        ).check(
-                ViewAssertions.matches(
-                        ViewMatchers.isDisplayed() //sem erro
+ * Created by matheus on 17/Z
                         //ViewMatchers.withText("Erro")
                 )
         );
