@@ -1,13 +1,10 @@
 package br.com.caelum.contadorapp.activity;
 
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import br.com.caelum.contadorapp.R;
 import br.com.caelum.contadorapp.fragment.ListaFragment;
