@@ -10,14 +10,28 @@ import org.hamcrest.Matchers;
 
 import br.com.caelum.contadorapp.activity.MainActivity;
 
-/**
- * Created by matheus on 17/Z
+
+public class MainTest extends ActivityInstrumentationTestCase2 {
+
+
+    public MainTest() {
+        super(MainActivity.class);
+    }
+
+    public void testaEditText() {
+        getActivity();
+
+        Espresso.onView(
+                ViewMatchers.withId(R.id.entra_valor_contagem)
+        ).check(
+                ViewAssertions.matches(
+                        ViewMatchers.isDisplayed() //sem erro
                         //ViewMatchers.withText("Erro")
                 )
         );
     }
 
-    public void testaInclusao(){
+    public void testaInclusao() {
 
         getActivity();
 
@@ -46,7 +60,7 @@ import br.com.caelum.contadorapp.activity.MainActivity;
         );
     }
 
-    public void testeExclusao(){
+    public void testeExclusao() {
 
         getActivity();
 
@@ -79,7 +93,7 @@ import br.com.caelum.contadorapp.activity.MainActivity;
 
     }
 
-    public void testaValorInserido(){
+    public void testaValorInserido() {
 
         getActivity();
 
