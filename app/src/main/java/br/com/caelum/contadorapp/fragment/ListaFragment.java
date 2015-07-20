@@ -100,16 +100,6 @@ public class ListaFragment extends Fragment {
         });
 
 
-        FloatingActionButton floatingActionButton = (FloatingActionButton) view.findViewById(R.id.fab2);
-
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                valores.clear();
-                onResume();
-            }
-        });
-
 
         resultadoSoma = (TextView) view.findViewById(R.id.soma);
 

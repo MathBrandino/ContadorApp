@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_contador);
         final EditText entradaValor = (EditText) findViewById(R.id.entra_valor_contagem);
 
-        FloatingActionButton botaoAdiciona = (FloatingActionButton) findViewById(R.id.botao_adicionar);
+        Button botaoAdiciona = (Button) findViewById(R.id.botao_adicionar);
 
         listaValores = (ListView) findViewById(R.id.lista_contador);
 

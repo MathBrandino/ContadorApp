@@ -10,9 +10,7 @@ import org.hamcrest.Matchers;
 
 import br.com.caelum.contadorapp.activity.MainActivity;
 
-
 public class MainTest extends ActivityInstrumentationTestCase2 {
-
 
     public MainTest() {
         super(MainActivity.class);
@@ -25,8 +23,8 @@ public class MainTest extends ActivityInstrumentationTestCase2 {
                 ViewMatchers.withId(R.id.entra_valor_contagem)
         ).check(
                 ViewAssertions.matches(
-                        ViewMatchers.isDisplayed() //sem erro
-                        //ViewMatchers.withText("Erro")
+                       // ViewMatchers.isDisplayed() //sem erro
+                        ViewMatchers.withText("Erro")
                 )
         );
     }

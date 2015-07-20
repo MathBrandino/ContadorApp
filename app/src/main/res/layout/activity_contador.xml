@@ -40,37 +40,11 @@
         android:textSize="18sp"
         android:id="@+id/soma"/>
 
-    <android.support.design.widget.CoordinatorLayout
+    <Button
         android:layout_width="wrap_content"
+        android:text="Adicionar"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
-        >
-
-        <android.support.design.widget.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/abc_ic_menu_paste_mtrl_am_alpha"
-            app:backgroundTint="#0099FF"
-            app:fabSize="normal"
-            android:id="@+id/botao_adicionar"/>
-
-
-    </android.support.design.widget.CoordinatorLayout>
-
-    <android.support.design.widget.CoordinatorLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|bottom"
-        >
-        <android.support.design.widget.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/abc_ic_clear_mtrl_alpha"
-            app:backgroundTint="#FF0000"
-            app:fabSize="mini"
-            android:id="@+id/fab2"/>
-
-
-    </android.support.design.widget.CoordinatorLayout>
+        android:layout_gravity="center"
+        android:id="@+id/botao_adicionar"/>
 
 </LinearLayout>
