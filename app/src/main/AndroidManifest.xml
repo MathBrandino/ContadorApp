@@ -4,13 +4,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/cards"
-        android:label="@string/app_name"
+        android:icon="@drawable/naipes"
+        android:label="Contador Buraco"
         android:theme="@style/Theme.AppCompat.Light"
         >
         <activity
             android:name=".activity.MainActivity"
-            android:label="@string/app_name"
+            android:label="Contador Buraco"
             android:windowSoftInputMode="stateHidden"
             android:screenOrientation="locked"
             >
