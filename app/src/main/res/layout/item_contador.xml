@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/entra_valor_contagem"
-            android:inputType="number"
+            android:inputType="numberSigned"
             android:hint="Pontuacão"/>
 
     </android.support.design.widget.TextInputLayout>
