@@ -24,8 +24,6 @@ import br.com.caelum.contadorapp.R;
 
 /**
  * Created by matheus on 08/07/15.
- *
- *
  */
 public class ListaFragment extends Fragment {
 
@@ -33,7 +31,7 @@ public class ListaFragment extends Fragment {
     private ListView listView;
     private TextInputLayout layout;
     private EditText entradaValor;
-    private List<Integer> valores ;
+    private List<Integer> valores;
     private TextView resultadoSoma;
 
 
@@ -113,9 +111,6 @@ public class ListaFragment extends Fragment {
 
         resultadoSoma = (TextView) view.findViewById(R.id.soma);
 
-
-
-
         return view;
     }
 
@@ -142,7 +137,7 @@ public class ListaFragment extends Fragment {
 
     }
 
-    public void carregaLista(List<Integer> valores){
+    public void carregaLista(List<Integer> valores) {
         ArrayAdapter<Integer> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, valores);
 
         listView.setAdapter(adapter);
@@ -162,7 +157,7 @@ public class ListaFragment extends Fragment {
     public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
 
-        if(savedInstanceState != null) {
+        if (savedInstanceState != null) {
             valores = (List<Integer>) savedInstanceState.getSerializable("valores");
             carregaLista(valores);
         }

@@ -1,7 +1,7 @@
 package br.com.caelum.contadorapp.activity;
 
-import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Bundle bundle;
     private String nome = "Nós";
-    private String nome1= "Eles";
+    private String nome1 = "Eles";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         tx.commit();
 
 
-
     }
 
     @Override
@@ -53,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
-
 
 
     @Override
