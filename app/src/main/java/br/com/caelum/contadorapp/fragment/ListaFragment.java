@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -30,7 +30,7 @@ public class ListaFragment extends Fragment {
     private String nome;
     private ListView listView;
     private TextInputLayout layout;
-    private EditText entradaValor;
+    private TextInputEditText entradaValor;
     private List<Integer> valores;
     private TextView resultadoSoma;
 
@@ -45,11 +45,16 @@ public class ListaFragment extends Fragment {
         View view = inflater.inflate(R.layout.item_contador, container, false);
 
         valores = new ArrayList<>();
+        if (savedInstanceState != null) {
+            valores = (List<Integer>) savedInstanceState.getSerializable("valores");
+        }
+
+
         TextView nomeTextView = (TextView) view.findViewById(R.id.nome_text);
 
         nomeTextView.setText(nome);
 
-        entradaValor = (EditText) view.findViewById(R.id.entra_valor_contagem);
+        entradaValor = (TextInputEditText) view.findViewById(R.id.entra_valor_contagem);
 
         layout = (TextInputLayout) entradaValor.getParent();
 
@@ -107,6 +112,7 @@ public class ListaFragment extends Fragment {
                 onResume();
             }
         });
+
 
 
         resultadoSoma = (TextView) view.findViewById(R.id.soma);
